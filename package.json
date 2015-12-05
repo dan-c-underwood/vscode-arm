@@ -1,0 +1,40 @@
+{
+	"name": "arm",
+	"displayName": "ARM",
+	"description": "ARM support for Visual Studio Code",
+	"version": "0.0.1",
+	"publisher": "dan-c-underwood",
+	"author": {
+		"name": "Dan Underwood"
+	},
+	"categories": [
+		"Languages"
+	],
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages"
+	],
+	"galleryBanner": {
+		"color": "#0084A9",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dan-c-underwood/vscode-arm.git"
+	},
+	"contributes": {
+		"languages": [{
+			"id": "arm",
+			"aliases": ["ARM", "arm"],
+			"extensions": [".s",".S",".asm"],
+			"configuration": "./arm.configuration.json"
+		}],
+		"grammars": [{
+			"language": "arm",
+			"scopeName": "source.arm",
+			"path": "./syntaxes/arm.json"
+		}]
+	}
+}

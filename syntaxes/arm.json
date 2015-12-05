@@ -1,0 +1,113 @@
+{
+  "scopeName": "source.arm",
+  "name": "ARM",
+  "fileTypes": [
+    "s",
+    "S",
+    "asm"
+  ],
+  "patterns": [
+    {
+      "match": "[;@].*$",
+      "name": "comment.arm"
+    },
+    {
+      "name": "comment.arm",
+      "begin": "\\/\\*",
+      "beginCaptures": {
+        "0": {
+          "name": "comment.begin.arm"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "comment.end.arm"
+        }
+      },
+      "end": "\\*\\/"
+    },
+    {
+      "match": ".*:$",
+      "name": "routine.arm"
+    },
+    {
+      "name": "string.quoted.arm",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "match": "\\'\\S\\'",
+      "name": "string.char.arm"
+    },
+    {
+      "match": "#?[0-9]+\\b",
+      "name": "constant.numeric.dec.arm"
+    },
+    {
+      "match": "#-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
+      "name": "variable.named.arm"
+    },
+    {
+      "match": "#?-?(0x|&)[0-9a-fA-F_]+\\b",
+      "name": "constant.numeric.hex.arm"
+    },
+    {
+      "match": "\\b(?i)([rcp]([0-9]|1[0-5])|[xw]([0-9]|1[0-5]|2[0-5]|30)|wzr|xzr|wsp|fpsr|fpcr|a[1-4]|v[1-8]|sl|sb|fp|ip|sp|lr|(c|s)psr(_c)?|pc|[sd]3[0-1]|[sd][12][0-9]|[sd][0-9]|fpsid|fpscr|fpexc|q3[0-1]|q2[0-9]|q1[0-9]|q[0-9]|APSR_nzcv|sy)(?-i)(!|\\b)",
+      "name": "storage.other.register.arm"
+    },
+    {
+      "name": "storage.memaddress.arm",
+      "begin": "\\[",
+      "end": "\\]",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "name": "storage.stack.arm",
+      "begin": "\\{",
+      "end": "\\}\\^?",
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "match": "\\b(?i)(v?(add|cvt|sub|mov|trn|cmp|div|qdmulh|mrs|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)s?|mul|mla|mull|smlabb|mov(w|t)|rev(8|16)?|pld|adr|adrl|vswp)(ne|eq|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|lt|le|gt|ge|al)?(?-i)\\b",
+      "name": "support.mnemonic.arithmetic.arm"
+    },
+    {
+      "match": "\\b(?i)(swi|svc|wfi|dmb|clrex|dsb|isb|v(ldr|str|push|pop)|push|pop|b(l|l?x|l?r)?|(i|e)?ret|(st|ld)(p|r(ex|s?(h|b)|d)?|m((f|e)(d|a)|(d|i)(b|a))?))(ne|eq|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|lt|le|gt|ge|al)?(?-i)\\b",
+      "name": "support.mnemonic.memory.arm"
+    },
+    {
+      "match": "\\b(?i)(def(b|w|s)|equ|align|include\\s.+\\.s)(?-i)\\b",
+      "name": "keyword.control.define.arm"
+    },
+    {
+      "name": "keyword.control.directive.arm",
+      "match": "\\.(?i)(globl|global|macro|endm|purgem|if|elseif|else|endif|section|text|data|bss|arm|align|balign|irp|rept|endr|req|unreq|error|short|func|endfunc|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string)(?-i)\\b"
+    },
+    {
+      "name": "meta.preprocessor.arm",
+      "begin": "^\\s*#\\s*(define|defined|elif|else|if|ifdef|ifndef|line|include|pragma|undef|endif)\\b",
+      "captures": {
+        "1": {
+          "name": "keyword.control.import.arm"
+        }
+      },
+      "end": "(?=(?://|/\\*))|$"
+    },
+    {
+      "match": "\\b\\=",
+      "name": "keyword.control.evaluation"
+    },
+    {
+      "match": "\\b(?i)(nop(ne|eq|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|lt|le|gt|ge|al)?)(?-i)\\b",
+      "name": "comment.nop.arm"
+    }
+  ]
+}

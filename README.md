@@ -8,5 +8,9 @@ The extension is a converted version of the syntax highlighting package for the 
 
 First install [Visual Studio Code](https://code.visualstudio.com). In the command palette (`cmd-shift-p`) select `Install Extension` and choose `ARM`.  
 
+## Screenshot
+
+![Example of Highlighting](https://raw.githubusercontent.com/dan-c-underwood/vscode-arm/master/images/example.png)
+
 ## License
 [MIT](LICENSE)

@@ -4,6 +4,7 @@
 	"description": "ARM support for Visual Studio Code",
 	"version": "0.0.1",
 	"publisher": "dan-c-underwood",
+	"icon": "images/icon.png",
 	"author": {
 		"name": "Dan Underwood"
 	},
@@ -13,9 +14,6 @@
 	"engines": {
 		"vscode": "^0.10.1"
 	},
-	"categories": [
-		"Languages"
-	],
 	"galleryBanner": {
 		"color": "#0084A9",
 		"theme": "dark"

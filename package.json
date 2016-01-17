@@ -2,7 +2,7 @@
 	"name": "arm",
 	"displayName": "ARM",
 	"description": "ARM support for Visual Studio Code",
-	"version": "0.0.2",
+	"version": "0.1.2",
 	"publisher": "dan-c-underwood",
 	"icon": "images/icon.png",
 	"author": {

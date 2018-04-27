@@ -31,6 +31,10 @@
       "name": "routine.arm"
     },
     {
+      "name": "invalid.illegal.string.arm",
+      "match": "\"[^\"]+$"
+    },
+    {
       "name": "string.quoted.arm",
       "begin": "\"",
       "end": "\""
@@ -84,7 +88,7 @@
       "name": "support.mnemonic.memory.arm"
     },
     {
-      "match": "\\b(?i)(def(b|w|s)|equ|align|include\\s.+\\.s)(?-i)\\b",
+      "match": "\\b(?i)(def(b|w|s)|equ|align\\s.+\\.s)(?-i)\\b",
       "name": "keyword.control.define.arm"
     },
     {
@@ -92,14 +96,8 @@
       "match": "\\.(?i)(globl|global|macro|endm|purgem|if|elseif|else|endif|section|text|data|bss|arm|align|balign|irp|rept|endr|req|unreq|error|short|func|endfunc|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string)(?-i)\\b"
     },
     {
-      "name": "meta.preprocessor.arm",
-      "begin": "^\\s*#\\s*(define|defined|elif|else|if|ifdef|ifndef|line|include|pragma|undef|endif)\\b",
-      "captures": {
-        "1": {
-          "name": "keyword.control.import.arm"
-        }
-      },
-      "end": "(?=(?://|/\\*))|$"
+      "name": "keyword.other.preprocessor.arm",
+      "match": "^\\s*\\.?(define|defined|elif|else|if|ifdef|ifndef|line|include|get|pragma|undef|endif)\\b"
     },
     {
       "match": "\\b\\=",

@@ -26,7 +26,7 @@
 		"languages": [{
 			"id": "arm",
 			"aliases": ["ARM", "arm"],
-			"extensions": [".s",".S",".asm"],
+			"extensions": [".s",".S",".asm", ".sx"],
 			"configuration": "./arm.configuration.json"
 		}],
 		"grammars": [{

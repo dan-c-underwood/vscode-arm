@@ -4,7 +4,8 @@
   "fileTypes": [
     "s",
     "S",
-    "asm"
+    "asm",
+    "sx"
   ],
   "patterns": [
     {

@@ -13,6 +13,10 @@
       "name": "comment.arm"
     },
     {
+      "match": "^\\s*#.*$",
+      "name": "comment.arm"
+    },
+    {
       "name": "comment.arm",
       "begin": "\\/\\*",
       "beginCaptures": {

@@ -2,7 +2,7 @@
 	"name": "arm",
 	"displayName": "ARM",
 	"description": "ARM support for Visual Studio Code",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"publisher": "dan-c-underwood",
 	"icon": "images/icon.png",
 	"author": {
@@ -23,16 +23,28 @@
 		"url": "https://github.com/dan-c-underwood/vscode-arm.git"
 	},
 	"contributes": {
-		"languages": [{
-			"id": "arm",
-			"aliases": ["ARM", "arm"],
-			"extensions": [".s",".S",".asm", ".sx"],
-			"configuration": "./arm.configuration.json"
-		}],
-		"grammars": [{
-			"language": "arm",
-			"scopeName": "source.arm",
-			"path": "./syntaxes/arm.json"
-		}]
+		"languages": [
+			{
+				"id": "arm",
+				"aliases": [
+					"ARM",
+					"arm"
+				],
+				"extensions": [
+					".s",
+					".S",
+					".asm",
+					".sx"
+				],
+				"configuration": "./arm.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "arm",
+				"scopeName": "source.arm",
+				"path": "./syntaxes/arm.json"
+			}
+		]
 	}
 }

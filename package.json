@@ -43,7 +43,7 @@
 			{
 				"language": "arm",
 				"scopeName": "source.arm",
-				"path": "./syntaxes/arm.json"
+				"path": "./syntaxes/arm.tmlanguage.json"
 			}
 		]
 	}

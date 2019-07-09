@@ -9,7 +9,7 @@
 		"name": "Dan Underwood"
 	},
 	"categories": [
-		"Languages"
+		"Programming Languages"
 	],
 	"engines": {
 		"vscode": "^0.10.1"
@@ -36,14 +36,14 @@
 					".asm",
 					".sx"
 				],
-				"configuration": "./arm.configuration.json"
+				"configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
 			{
 				"language": "arm",
 				"scopeName": "source.arm",
-				"path": "./syntaxes/arm.json"
+				"path": "./syntaxes/arm.tmlanguage.json"
 			}
 		]
 	}

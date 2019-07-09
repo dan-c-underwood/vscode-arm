@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "scopeName": "source.arm",
   "name": "ARM",
   "fileTypes": [
@@ -86,11 +87,11 @@
     },
     {
       "match": "\\b(?i)(v?(add|cvt|sub|mov|trn|cmp|div|qdmulh|mrs|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)s?|mul|mla|mull|smlabb|mov(w|t)|rev(8|16)?|pld|adr|adrl|vswp)(ne|eq|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|lt|le|gt|ge|al)?(?-i)\\b",
-      "name": "support.mnemonic.arithmetic.arm"
+      "name": "support.function.mnemonic.arithmetic.arm"
     },
     {
       "match": "\\b(?i)(swi|svc|wfi|dmb|clrex|dsb|isb|v(ldr|str|push|pop)|push|pop|b(l|l?x|l?r)?|(i|e)?ret|(st|ld)(p|r(ex|s?(h|b)|d)?|m((f|e)(d|a)|(d|i)(b|a))?))(ne|eq|cs|hs|cc|lo|mi|pl|vs|vc|hi|ls|lt|le|gt|ge|al)?(?-i)\\b",
-      "name": "support.mnemonic.memory.arm"
+      "name": "support.function.mnemonic.memory.arm"
     },
     {
       "match": "\\b(?i)(def(b|w|s)|equ|align\\s.+\\.s)(?-i)\\b",

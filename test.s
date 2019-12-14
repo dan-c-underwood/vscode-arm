@@ -1,6 +1,6 @@
 @	test.s
 @	dan-c-underwood
-@	Version - 1.0.1
+@	Version - 1.1.0
 @	15/08/15
 @
 @	Description - Example ARM Source File
@@ -17,8 +17,16 @@ branches:
 		.include "test.s"
 
 
+#if defined(TEST)
+	nop
+#endif
+
+#if ARM_ASSEMBLY
+	svc 0
+#endif
+
 stack:
-stack_end:      defs	512			@ Stack Declaration
+stack_end:      defs	512		@ Stack Declaration
 
 
 		/* C Style comments

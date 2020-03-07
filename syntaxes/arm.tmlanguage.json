@@ -48,7 +48,25 @@
       }
     },
     {
-      "match": "\\b(?i)(?:mov(?:w|t)?|bic|swi|svc|wfi|dmb|clrex|dsb|isb|v(?:ldr|str|push|pop)|push|pop|b(?:l|l?x|l?r)?|(?:i|e)?ret|(?:st|ld)(?:p|r(?:ex|s?(?:h|b)|d)?|m(?:(?:f|e)(?:d|a)|(?:d|i)(?:b|a))?))(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
+      "match": "\\b(?i)v?(?:(?:ldr|str))(\\w{2})?(?:d|h|sh|sb)?(?-i)\\b",
+      "name": "support.function.mnemonic.memory.arm",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#conditions",
+              "name": "support.function.mnemonic.memory.arm"
+            },
+            {
+              "match": "\\w{2}",
+              "name": "invalid.illegal.condition.arm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "match": "\\b(?i)(?:mov(?:w|t)?|bic|swi|svc|wfi|dmb|clrex|dsb|isb|v?(?:push|pop)|b(?:l|l?x|l?r)?|(?:i|e)?ret|(?:st|ld)(?:p|r(?:ex|s?(?:h|b)|d)?|m(?:(?:f|e)(?:d|a)|(?:d|i)(?:b|a))?))(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm",
       "captures": {
         "1": {

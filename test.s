@@ -1,6 +1,6 @@
 @	test.s
 @	dan-c-underwood
-@	Version - 1.2.0
+@	Version - 1.3.0
 @	15/08/15
 @
 @	Description - Example ARM Source File
@@ -41,3 +41,7 @@ start:
 
 end:
 		svc	0
+		b {pc}+4, 
+
+.thumb
+		add r0, r1

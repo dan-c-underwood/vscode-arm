@@ -286,7 +286,7 @@
     "variables": {
       "patterns": [
         {
-          "match": "#-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
+          "match": "#?-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
           "name": "variable.named.arm"
         }
       ]

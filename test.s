@@ -35,7 +35,7 @@ start:
 		addnes	r0, r0, #&1
 		bne	start
 		ldmfd	sp!, {r0-r2, pc}^
-		ldreq	x16, r1, [r2, #0x80]
+		ldrbeq	x16, r1, [r2, #0x80]
 		pacdzb	x16
 		retab
 

@@ -125,7 +125,7 @@
     },
     {
       "name": "keyword.control.directive.arm",
-      "match": "\\.(?i)(globl|global|extern|weak|macro|endm|purgem|section|text|data|bss|arm|align|balign|irp|rept|endr|(un)?req|error|short|(end)?func|hidden|type|cpu|fpu|arch|code|syntax|altmacro|object_arch|word|int|string|thumb|thumb_set|set|pragma|undef|line|get)(?-i)\\b"
+      "match": "\\.(?i)(globl|global|extern|weak|macro|endm|purgem|section|text|data|bss|arm|align|balign|irp|rept|endr|(un)?req|error|short|(end)?func|hidden|type|cpu|fpu|arch|code|syntax|altmacro|object_arch|word|int|string|thumb(_set)?|set|pragma|undef|line|get)(?-i)\\b"
     },
     {
       "match": "\\b\\=",
@@ -310,7 +310,7 @@
     "variables": {
       "patterns": [
         {
-          "match": "#?-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
+          "match": "(?<!^)\\b#?-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
           "name": "variable.named.arm"
         }
       ]

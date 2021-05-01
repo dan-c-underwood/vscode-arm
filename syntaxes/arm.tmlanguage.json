@@ -151,7 +151,7 @@
     },
     {
       "name": "storage.memaddress.arm",
-      "match": "\\[[ \\t]*(\\w+),[ \\t]*([a-zA-Z0-9#-]+)[ \\t]*\\]!?",
+      "match": "\\[[ \\t]*(\\w+),[ \\t]*([a-zA-Z0-9#-_]+)[ \\t]*\\]!?",
       "captures": {
         "1": {
           "patterns": [

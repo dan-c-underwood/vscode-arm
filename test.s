@@ -43,5 +43,5 @@ end:
 		svc	0
 		b {pc}+4, 
 
-.cpu
+.thumb
 		add r0, r1

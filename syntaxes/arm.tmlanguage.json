@@ -18,7 +18,7 @@
       "name": "routine.arm"
     },
     {
-      "match": "\\b(?i)(?:v?(?:add|cvt|bic|sub|trn|cmp|div|qdmulh|mrs|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(?:rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)|mul|mla|mull|smlabb|rev(?:8|16)?|pld|adr|adrl|vswp)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
+      "match": "\\b(?i)(?:v?(?:add|cvt|bic|sub|trn|cmp|[us]?div|qdmulh|mrs|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(?:rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)|mul|mla|mull|smlabb|rev(?:8|16)?|pld|adr|adrl|vswp)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
       "name": "support.function.mnemonic.arithmetic.arm",
       "captures": {
         "1": {

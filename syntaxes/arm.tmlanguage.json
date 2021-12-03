@@ -48,7 +48,7 @@
       }
     },
     {
-      "match": "\\b(?i)v?(?:ld(?:r|ar)|st(?:r|lr))(?:d(\\w{2})?|(?:(?:s?b|s?h)(\\w{2})?|(\\w{2})(?:s?b|s?h)?))(?-i)\\b",
+      "match": "\\b(?i)v?(?:ldr|str)(?:d(\\w{2})?|(?:(?:s?b|s?h)(\\w{2})?|(\\w{2})(?:s?b|s?h)?))(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm",
       "captures": {
         "1": {

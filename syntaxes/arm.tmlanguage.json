@@ -90,19 +90,19 @@
       }
     },
     {
-      "match": "\\b(?i)(?:ldar|ldarb|ldarh|ldaxp|ldaxr|ldaxrb|ldaxrh|ldnp|ldp|ldpsw|ldr|ldrb|ldrh|ldrsb|ldrsh|ldrsw|ldtr|ldtrb|ldtrh|ldtrsw|ldur|ldurb|ldursb|ldursh|ldursw|ldxp|ldxr|ldxrb|ldxrh)(?-i)\\b",
+      "match": "\\b(?i)(?:ldar[bh]?|ldax[pb(?:rh?)]|ldn?p|ldpsw|ldr[bh]?|ldrsb|ldrsh|ldrsw|ldtr[bh]?|ldtrsw|ldurb?|ldursb|ldursh|ldursw|ldx[pr]|ldxr[bh])(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm"
     },
     {
-      "match": "\\b(?i)(?:prfm|prfum)(?-i)\\b",
+      "match": "\\b(?i)(?:prfu?m)(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm"
     },
     {
-      "match": "\\b(?i)(?:stlr|stlrb|stlrh|stlxp|stlxr|stlxrh|stnp|stp|str|strb|strh|sttr|sttrb|sttrh|stur|sturn|sturh|stxp|stxr|stxrb|stxrh)(?-i)\\b",
+      "match": "\\b(?i)(?:stlr[bh]?|stlx[pb(?:rh?)]|stn?p|str[bh]?|sttr[bh]?|stur[nh]?|stx[pb(?:rh?)])(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm"
     },
     {
-      "match": "\\b(?i)(?:ldm|ldmia|ldmfd|ldmda|ldmfa|ldmdb|ldmea|ldmib|ldmed|v?(?:push|pop)|stm|stmia|stmda|stmed|stmdb|stmfd|stmib|smfa(?:\\.n|\\.w)?)(?-i)\\b",
+      "match": "\\b(?i)(?:ldm(?:ia)?|ldmf[da]|ldmd[ab]|ldmea|ldmib|ldmed|v?(?:push|pop)|stm(?:ia)?|stmd[ab]|stmed|stmfd|stmib|smfa(?:\\.n|\\.w)?)(?-i)\\b",
       "name": "support.function.mnemonic.multiple.arm"
     },
     {

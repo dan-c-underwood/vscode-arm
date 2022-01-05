@@ -18,7 +18,7 @@
       "name": "routine.arm"
     },
     {
-      "match": "\\b(?i)(?:v?(?:add|cvt|bic|sub|trn|cmp|[us]?div|qdmulh|mrs|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(?:rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)|mul|mla|mull|smlabb|rev(?:8|16)?|pld|adr|adrl|vswp)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
+      "match": "\\b(?i)(?:v?(?:add|cvt|bic|sub|trn|cmp|cb(?:z|nz)|[us]?div|qdmulh|mul|ld1|qadd|qshrun|st[1234]|addw|mull|mlal|rshrn|swp|qmovunand|m(?:rs|sr)|eor|sub|rsb|adc|sbc|rsc|and|tst|teq|cmp|cmn|orr|mov|bic|mvn|neg|lsr|lsl|ror|asr)|mul|mla|mull|smlabb|rev(?:8|16)?|pld|adr|adrl|vswp)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
       "name": "support.function.mnemonic.arithmetic.arm",
       "captures": {
         "1": {
@@ -90,7 +90,23 @@
       }
     },
     {
-      "match": "\\b(?i)(?:mov(?:w|t)?|pac(?:dz?[a|b]|ga|i(?:[a|b](?:1716|sp|z)?)|z[a|b])|swi|svc|wfi|dmb|clrex|dsb|isb|v?(?:push|pop)|b(?:l|l?x|l?r)?|(?:i|e)?ret(?:aa|ab)?|(?:st|ld)(?:p|r(?:ex|s?(?:h|b)|d)?|m(?:(?:f|e)(?:d|a)|(?:d|i)(?:b|a))?))(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
+      "match": "\\b(?i)(?:ldar|ldarb|ldarh|ldaxp|ldaxr|ldaxrb|ldaxrh|ldnp|ldp|ldpsw|ldr|ldrb|ldrh|ldrsb|ldrsh|ldrsw|ldtr|ldtrb|ldtrh|ldtrsw|ldur|ldurb|ldursb|ldursh|ldursw|ldxp|ldxr|ldxrb|ldxrh)(?-i)\\b",
+      "name": "support.function.mnemonic.memory.arm"
+    },
+    {
+      "match": "\\b(?i)(?:prfm|prfum)(?-i)\\b",
+      "name": "support.function.mnemonic.memory.arm"
+    },
+    {
+      "match": "\\b(?i)(?:stlr|stlrb|stlrh|stlxp|stlxr|stlxrh|stnp|stp|str|strb|strh|sttr|sttrb|sttrh|stur|sturn|sturh|stxp|stxr|stxrb|stxrh)(?-i)\\b",
+      "name": "support.function.mnemonic.memory.arm"
+    },
+    {
+      "match": "\\b(?i)(?:ldm|ldmia|ldmfd|ldmda|ldmfa|ldmdb|ldmea|ldmib|ldmed|v?(?:push|pop)|stm|stmia|stmda|stmed|stmdb|stmfd|stmib|smfa(?:\\.n|\\.w)?)(?-i)\\b",
+      "name": "support.function.mnemonic.multiple.arm"
+    },
+    {
+      "match": "\\b(?i)(?:mov(?:w|t)?|pac(?:dz?[a|b]|ga|i(?:[a|b](?:1716|sp|z)?)|z[a|b])|swi|svc|hvc|wfi|dmb|clrex|dsb|isb|tlbi|b(?:l|l?x|l?r)?|(?:i|e)?ret(?:aa|ab)?)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm",
       "captures": {
         "1": {

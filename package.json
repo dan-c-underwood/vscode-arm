@@ -28,7 +28,8 @@
 				"id": "arm",
 				"aliases": [
 					"ARM",
-					"arm"
+					"arm",
+					"Arm"
 				],
 				"extensions": [
 					".s",

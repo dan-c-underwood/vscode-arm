@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "scopeName": "source.arm",
-  "name": "ARM",
+  "name": "Arm Assembly",
   "fileTypes": [
     "s",
     "S",
@@ -10,7 +10,7 @@
   ],
   "patterns": [
     {
-      "match": "^\\s*[#\\.](define|include|(end|el|else)?if|if(def|ndef)?|else)(\\s(defined\\([a-zA-Z_]+\\)|[a-zA-Z_]+))?$",
+      "match": "^\\s*[#\\.](define|include|(end|el|else)?if|if(def|ndef)?|else)(\\s+(defined\\(\\w+\\)|\\w+)(\\s+(&&|\\|\\|)\\s+defined\\(\\w+\\)|\\w]+)*)?$",
       "name": "meta.preprocessor"
     },
     {
@@ -102,6 +102,10 @@
       "name": "support.function.mnemonic.memory.arm"
     },
     {
+      "match": "\\b(?i)(dc[dubi]|(?:[qw]u?))|area|space|fill\\b",
+      "name": "support.function.mnemonic.memory.arm"
+    },
+    {
       "match": "\\b(?i)(?:ldm(?:ia)?|ldmf[da]|ldmd[ab]|ldmea|ldmib|ldmed|v?(?:push|pop)|stm(?:ia)?|stmd[ab]|stmed|stmfd|stmib|smfa(?:\\.n|\\.w)?)(?-i)\\b",
       "name": "support.function.mnemonic.multiple.arm"
     },
@@ -136,7 +140,7 @@
       }
     },
     {
-      "match": "\\b(?i)(def(b|w|s)|equ|align\\s.+\\.s)(?-i)\\b",
+      "match": "\\b(?i)(def(b|w|s)|equ\\s.+\\.s)(?-i)\\b",
       "name": "keyword.control.define.arm"
     },
     {

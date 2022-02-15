@@ -2,7 +2,7 @@
 	"name": "arm",
 	"displayName": "Arm Assembly",
 	"description": "Arm assembly syntax support for Visual Studio Code",
-	"version": "1.7.2",
+	"version": "1.7.3",
 	"publisher": "dan-c-underwood",
 	"icon": "images/icon.png",
 	"author": {

@@ -10,7 +10,7 @@
   ],
   "patterns": [
     {
-      "match": "^\\s*[#\\.](define|include|(end|el|else)?if|if(def|ndef)?|else)(\\s+(defined\\(\\w+\\)|\\w+)(\\s+(&&|\\|\\|)\\s+defined\\(\\w+\\)|\\w]+)*)?$",
+      "match": "^\\s*[#\\.](define|include|(end|el|else)?if|if(def|ndef)?|else)(\\s+(defined\\(\\w+\\)|\\w+)(\\s+(&&|\\|\\|)\\s+defined\\(\\w+\\)|\\w]+)*)?\\b",
       "name": "meta.preprocessor"
     },
     {
@@ -102,7 +102,7 @@
       "name": "support.function.mnemonic.memory.arm"
     },
     {
-      "match": "\\b(?i)(dc[dubi]|(?:[qw]u?))|area|space|fill\\b",
+      "match": "\\b(?i)(dc[dubi](?:[qw]u?)?)|area|space|fill\\b",
       "name": "support.function.mnemonic.memory.arm"
     },
     {
@@ -110,7 +110,7 @@
       "name": "support.function.mnemonic.multiple.arm"
     },
     {
-      "match": "\\b(?i)(?:mov(?:w|t)?|pac(?:dz?[a|b]|ga|i(?:[a|b](?:1716|sp|z)?)|z[a|b])|swi|svc|hvc|wfi|dmb|clrex|dsb|isb|tlbi|b(?:l|l?x|l?r)?|(?:i|e)?ret(?:aa|ab)?)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
+      "match": "\\b(?i)(?:mov(?:w|t)?|pac(?:dz?[a|b]|ga|i(?:[a|b](?:1716|sp|z)?)|z[a|b])|swi|svc|hvc|dmb|clrex|dsb|isb|tlbi|b(?:l|l?x|l?r)?|(?:i|e)?ret(?:aa|ab)?)(?:(?:(?=s)s(\\w{2})?)|(\\w{2})s?)?(?-i)\\b",
       "name": "support.function.mnemonic.memory.arm",
       "captures": {
         "1": {
@@ -138,6 +138,10 @@
           ]
         }
       }
+    },
+    {
+      "match": "\\b(?i)(wf[ei])(?-i)\\b",
+      "name": "keyword.control.wait.arm"
     },
     {
       "match": "\\b(?i)(def(b|w|s)|equ\\s.+\\.s)(?-i)\\b",
@@ -330,7 +334,7 @@
     "variables": {
       "patterns": [
         {
-          "match": "(?<!^)\\b#?-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
+          "match": "(\\b|#)-?[a-zA-Z_][0-9a-zA-Z_]*\\b",
           "name": "variable.named.arm"
         }
       ]

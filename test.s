@@ -41,7 +41,9 @@ start:
 
 end:
 		svc	0
-		b {pc}+4, 
+		b {pc}+4, r0
+		wfi
+
 
 .thumb
 		add r0, r1

@@ -140,8 +140,8 @@
       }
     },
     {
-      "match": "\\b(?i)(wf[ei])(?-i)\\b",
-      "name": "keyword.control.wait.arm"
+      "match": "\\b(?i)((wf[ei])|cps(i[de])?)(?-i)\\b",
+      "name": "keyword.control.cpu.arm"
     },
     {
       "match": "\\b(?i)(def(b|w|s)|equ\\s.+\\.s)(?-i)\\b",

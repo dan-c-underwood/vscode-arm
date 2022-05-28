@@ -6,8 +6,9 @@
 @	Description - Example ARM Source File
 
 strings:
-string_a: 	defw	"Awaiting input"
+string_a: 	defw	"Awaiting input\n"
 string_b:	defb    'a', 'b', 'c', 'd'
+string_c:	defw	"this: '\"' is a quote"
 
 branches:
 		b		start			@ With comment!

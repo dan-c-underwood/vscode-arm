@@ -1,18 +1,12 @@
 {
 	"name": "arm",
 	"displayName": "Arm Assembly",
-	"description": "Arm assembly syntax support for Visual Studio Code",
+	"description": "Arm assembly syntax highlighting and documentation tooltips",
 	"version": "1.7.4",
 	"publisher": "dan-c-underwood",
 	"icon": "images/icon.png",
 	"author": {
 		"name": "Dan Underwood"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"engines": {
-		"vscode": "^0.10.1"
 	},
 	"galleryBanner": {
 		"color": "#0084A9",
@@ -22,6 +16,14 @@
 		"type": "git",
 		"url": "https://github.com/dan-c-underwood/vscode-arm.git"
 	},
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
 	"contributes": {
 		"languages": [
 			{
@@ -47,5 +49,22 @@
 				"path": "./syntaxes/armv8-a.tmlanguage.json"
 			}
 		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.85.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "18.x",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"eslint": "^8.56.0",
+		"typescript": "^5.3.3",
+		"@vscode/test-cli": "^0.0.4",
+		"@vscode/test-electron": "^2.3.8"
 	}
 }

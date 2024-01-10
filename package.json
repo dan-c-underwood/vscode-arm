@@ -27,9 +27,9 @@
 			{
 				"id": "arm",
 				"aliases": [
-					"ARM",
+					"Arm",
 					"arm",
-					"Arm"
+					"ARM"
 				],
 				"extensions": [
 					".s",

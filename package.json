@@ -37,6 +37,10 @@
 					".asm",
 					".sx"
 				],
+				"icon": {
+					"light": "./icons/arm.png",
+					"dark": "./icons/arm-dark.png"
+				},
 				"configuration": "./language-configuration.json"
 			}
 		],

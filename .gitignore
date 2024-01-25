@@ -29,3 +29,6 @@ node_modules
 
 # Workspace file
 vscode-arm.code-workspace
+
+package-lock.json
+out
